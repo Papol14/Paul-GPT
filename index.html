@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot UI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+
+      .message {
+        max-width: 60%;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        word-wrap: break-word;
+      }
+
+      .user-message {
+        background-color: #4caf50;
+        color: #fff;
+        align-self: flex-end;
+      }
+
+      .bot-message {
+        background-color: #f8f8f8;
+        color: #000;
+        align-self: flex-start;
+      }
+
+      #user-input {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 90%;
+        margin: 20px 50px;
+        display: flex;
+        padding: 10px;
+        background-color: transparent;
+      }
+
+      #user-message {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+
+      #send-button {
+        padding: 10px 15px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat-messages"></div>
+    <div id="user-input">
+      <input type="text" id="user-message" placeholder="Type your message..." />
+      <button id="send-button" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+      function sendMessage() {
+        var userMessage = document.getElementById("user-message").value;
+
+        if (userMessage.trim() !== "") {
+          appendMessage("user", userMessage);
+          // Simulating a bot response for demonstration purposes
+          var botResponse = "This is a sample response from the chatbot.";
+          appendMessage("bot", botResponse);
+
+          // Clear the user input
+          document.getElementById("user-message").value = "";
+        }
+      }
+
+      function appendMessage(sender, message) {
+        var chatMessages = document.getElementById("chat-messages");
+        var newMessage = document.createElement("div");
+        newMessage.className = "message " + sender + "-message";
+        newMessage.textContent = message;
+        chatMessages.appendChild(newMessage);
+
+        // Scroll to the bottom to show the latest message
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    </script>
+  </body>
+</html>
