@@ -39,6 +39,7 @@ export const App = () => {
     <div className="app-container">
       {/* Header */}
       <header className="app-header">
+      <img src="/cat.png" alt="cat image" width={60} />
         <h1>JP Chatbot</h1>
         <p>Your 24/7 AI Assistant</p>
       </header>
