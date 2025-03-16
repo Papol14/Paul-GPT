@@ -26,7 +26,7 @@ export const App = () => {
       i18n: {
         en: {
           title: 'Hi po! 👋',
-          subtitle: "Start a chat. I'm here to help you 24/7.",
+          subtitle: "AI can make mistakes. If it takes too long to respond or gives an incorrect answer, refresh the page and try again.",
           footer: '',
           getStarted: 'New Conversation',
           inputPlaceholder: 'Type your question..',
