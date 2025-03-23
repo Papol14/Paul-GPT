@@ -20,7 +20,6 @@ export const App = () => {
       showWelcomeScreen: true,
       defaultLanguage: 'en',
       initialMessages: [
-        'Hi there! 👋',
         'My name is John Paul. How can I assist you today?'
       ],
       i18n: {
