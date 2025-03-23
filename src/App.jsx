@@ -7,7 +7,7 @@ import './App.css'; // Create this file for custom styles
 export const App = () => {
   useEffect(() => {
     createChat({
-      webhookUrl: 'https://papolskie.app.n8n.cloud/webhook/2ad6ead1-9b98-46d7-a84b-c18ba428a58c/chat',
+      webhookUrl: import.meta.env.VITE_CHAT_URL,
       webhookConfig: {
         method: 'POST',
         headers: {}
@@ -25,8 +25,8 @@ export const App = () => {
       ],
       i18n: {
         en: {
-          title: 'Hi po! 👋',
-          subtitle: "AI can make mistakes. If it takes too long to respond or gives an incorrect answer, refresh the page and try again.",
+          title: 'Hi!👋',
+          subtitle: "If it takes too long to respond or gives an incorrect answer, refresh the page and try again.",
           footer: '',
           getStarted: 'New Conversation',
           inputPlaceholder: 'Type your question..',

@@ -16,7 +16,7 @@ body {
 
 /* Header */
 .app-header {
-  background-color: #6200ee;
+  background-color: #101330;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -64,7 +64,7 @@ body {
 
 .app-description h2 {
   margin-top: 0;
-  color: #6200ee;
+  color: #DB4061;
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
